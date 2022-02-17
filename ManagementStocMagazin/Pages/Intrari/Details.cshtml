@@ -1,0 +1,43 @@
+﻿@page
+@model ManagementStocMagazin.Pages.Intrari.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Intrare</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Intrare.CatalogProduse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Intrare.CatalogProduse.Descriere)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Intrare.Descriere)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Intrare.Descriere)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Intrare.DataIntrarii)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Intrare.DataIntrarii)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Intrare.Cantitate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Intrare.Cantitate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Intrare.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
